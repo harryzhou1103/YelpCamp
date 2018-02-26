@@ -23,8 +23,9 @@ if(process.env.MLAB_USERNAME) { // check if running remotely
     var password = process.env.MLAB_PASSWORD;
     connectionString = 'mongodb://' + username + ':' + password;
     connectionString += ' ​@ds247648.mlab.com:47648/heroku_q7lg24kj​';
-    mongoose.connect(connectionString);
-    console.log("We have connected to the MLAB MONGODB")// use yours
+    mongoose.connect(connectionString, function () {
+        console.log("i have connected to mongodb")
+    });// use yours
 }
 else {
     mongoose.connect("mongodb://localhost/yelp_camp_v10");
