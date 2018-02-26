@@ -21,6 +21,7 @@ var data = [
 ]
 
 function seedDB(){
+    console.log("I'm running....to seed the data.....")
     //Remove all campgrounds
     Campground.remove({}, function(err){
         if(err){
