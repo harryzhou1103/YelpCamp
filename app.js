@@ -18,7 +18,7 @@ var commentRoutes    = require("./routes/comments"),
     indexRoutes      = require("./routes/index");
 
 
-if(process.env.MLAB_USERNAME_WEBDEV) { // check if running remotely
+if(process.env.MLAB_USERNAME) { // check if running remotely
     var username = process.env.MLAB_USERNAME; // get from environment
     var password = process.env.MLAB_PASSWORD;
     connectionString = 'mongodb://' + username + ':' + password;
