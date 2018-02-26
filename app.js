@@ -23,6 +23,7 @@ if(process.env.MLAB_USERNAME) { // check if running remotely
     var password = process.env.MLAB_PASSWORD;
     connectionString = 'mongodb://' + username + ':' + password;
     connectionString += ' ​@ds247648.mlab.com:47648/heroku_q7lg24kj​';
+    console.log(username + password)
     mongoose.connect(connectionString, function () {
         console.log("i have connected to mongodb")
     });// use yours
